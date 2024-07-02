@@ -1,11 +1,14 @@
 <?php
 
+use App\Http\Controllers\AppController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/index', [AppController::class, 'index'])->name('index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

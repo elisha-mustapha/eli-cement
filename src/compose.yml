@@ -1,0 +1,10 @@
+services:
+    web:
+        build: 
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - .:/var/www/html/
+        container_name: ign633-nigeria-website
+        ports:
+            - 80:80
